@@ -61,6 +61,7 @@ export default function ProfilePage() {
           <p className="text-gray-text-white">
             <span className="font-semibold text-white">Message:</span> {isMessage}
           </p>
+          <h2 className="font-semibold text-white">Verfication Status: <span className="font-normal">{user?.isVerified === true ? "Verified User" : "Not Verified"}</span></h2>
         </div>
         <button
           className="mt-8 bg-white text-purple-900 px-6 py-2 rounded-full hover:bg-blue-500 transition duration-300"

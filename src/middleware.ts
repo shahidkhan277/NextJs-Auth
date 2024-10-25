@@ -4,8 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(request: NextRequest){
     const path = request.nextUrl.pathname;
-
-    const isPublicPath = path === '/login' || path === '/signup' || path === '/verifyemail';
+    const publicPaths = ['/login', '/signup', '/verifyemail', '/forgotPassowrd', '/resetPassword'];
+    const isPublicPath = publicPaths.includes(path);
 
     const token = request.cookies.get('token')?.value || '';
 
